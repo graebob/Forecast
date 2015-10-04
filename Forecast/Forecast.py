@@ -1,9 +1,15 @@
-import forecastio
+﻿import forecastio
 
 def main():
     
     print ("Beginning query")
-    api_key = "95e773cdbaff695c2c0a854baa0d1b96"
+    
+    keyFile = open("C:/Users/owner/documents/visual studio 2015/Projects/Forecast/api_key.txt", "r")
+    if keyFile.closed == False:   
+        api_key = keyFile.readline()
+        print ("API Key read successfully")
+    keyFile.close()
+
     lat = 52.0059
     lng = -0.7277
     
